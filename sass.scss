@@ -1,0 +1,123 @@
+@import './mixin';
+
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    @include flexCenter;
+    flex-direction: column;
+    width: 1500px;
+
+    h1 {
+        font-size: 60px;
+        font-weight: 100;
+        margin-top: 140px;
+        margin-bottom: 100px;
+        padding: 0;
+    }
+
+    .plans-container {
+        @include flexCenter;
+
+        .plan {
+            display: flex;
+            flex-direction: column;
+            width: 360px;
+            margin: 0 70px 0 70px;
+            padding: 50px;
+            box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.05);
+
+            .plan-title {
+                font-size: 24px;
+                margin: 50px 0 50px 0;
+            }
+
+            .price {
+                @include flexCenter;
+                margin-bottom: 40px;
+
+                span.dollar {
+                    line-height: 45px;
+                    font-size: 40px;
+                    font-weight: bold;
+                    color: black;
+                }
+
+                span.amount {
+                    line-height: 60px;
+                    font-size: 72px;
+                    font-weight: bold;
+                    color: black;
+                }
+
+                span {
+                    font-size: 24px;
+                    color: #8492af;
+                }
+            }
+
+            .plan-features {
+                .feature {
+                    display: flex;
+                    align-items: center;
+                    list-style-type: none;
+                    font-size: 18px;
+                    line-height: 36px;
+                    color: #8492af;
+
+                    span {
+                        display: flex;
+                        height: 24px;
+                        width: 24px;
+                        background-image: url(images/checked.png);
+                        background-position: center;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        margin-right: 10px;
+                    }
+
+                    .cross {
+                        background-image: url(images/cross.png);
+                    }
+                }
+            }
+        }
+    }
+
+    .text {
+        display: flex;
+        width: 880px;
+        text-align: center;
+        font-size: 18px;
+        line-height: 30px;
+        color: #8492af;
+        margin-top: 100px;
+        margin-bottom: 60px;
+    }
+
+    button {
+        @include flexCenter;
+        color: white;
+        background-color: #5584ff;
+        width: 200px;
+        height: 50px;
+        border: none;
+        border-radius: 25px;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 120px;
+    }
+
+    button:focus {
+        cursor: pointer;
+    }
+
+    button:focus {
+        outline: none;
+        opacity: 0.8;
+    }
+}
